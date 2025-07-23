@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בוטיק אֶלִיזֶה</title>
+    <meta name="description" content="בבוטיק אֶלִיזֶה, אנו מזמינים אותך לגלות את הגרסה המלוטשת והמפתה ביותר של עצמך. כל פריט נבחר בקפידה כדי להעצים את זוהרך הטבעי ולהעניק לך נוכחות בלתי נשכחת, כאילו יצאת זה עתה מרחובות פריז המוארים.">
+    
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="בוטיק אֶלִיזֶה">
+    <meta property="og:description" content="בבוטיק אֶלִיזֶה, אנו מזמינים אותך לגלות את הגרסה המלוטשת והמפתה ביותר של עצמך. כל פריט נבחר בקפידה כדי להעצים את זוהרך הטבעי ולהעניק לך נוכחות בלתי נשכחת, כאילו יצאת זה עתה מרחובות פריז המוארים.">
+    
+    
+    
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'display': ['Playfair Display', 'serif'],
+              'body': ['Inter', 'sans-serif']
+            },
+            colors: {
+              primary: '#000000',
+              accent: '#0066ff',
+              'accent-gold': '#d4a574',
+              'accent-emerald': '#10b981'
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 25%, #581c87 50%, #7c2d12 75%, #92400e 100%);
+        }
+        
+        .gradient-secondary {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+        }
+        
+        .card-premium {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #d4a574, #f59e0b, #d4a574);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-premium {
+            background: linear-gradient(135deg, #d4a574, #f59e0b);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stars {
+            color: #d4a574;
+            font-size: 1rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body class="font-body bg-gray-50 text-gray-900" dir="rtl">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    
+                    <span class="font-display text-2xl font-bold">בוטיק אֶלִיזֶה</span>
+                </div>
+                <nav class="hidden md:flex gap-6">
+                    <a href="#products" class="hover:text-yellow-300 transition-colors">מוצרים</a>
+                    <a href="#about" class="hover:text-yellow-300 transition-colors">אודות</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition-colors">צור קשר</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 text-gradient animate-fadeInUp">
+                מעבר לבגד: אמנות הלבוש הפריזאי שמשנה חיים
+            </h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed animate-fadeInUp" style="animation-delay: 0.3s;">
+                בבוטיק אֶלִיזֶה, אנו מזמינים אותך לגלות את הגרסה המלוטשת והמפתה ביותר של עצמך. כל פריט נבחר בקפידה כדי להעצים את זוהרך הטבעי ולהעניק לך נוכחות בלתי נשכחת, כאילו יצאת זה עתה מרחובות פריז המוארים.
+            </p>
+            <div class="mt-8 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <a href="#products" class="btn-premium text-lg px-8 py-4">גלה את המוצרים שלנו</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold mb-4 text-gradient">המוצרים שלנו</h2>
+                <p class="text-xl text-gray-600">גלו את מגוון המוצרים המיוחדים שלנו</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1583794351660-f65511b0e9c8?w=400&h=300&fit=crop" alt="שמלת ערב 'הלוטוס השחור' בעיצוב בלעדי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת ערב 'הלוטוס השחור' בעיצוב בלעדי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת ערב עוצרת נשימה מבד משי יוקרתי בגזרה מחמיאה, מעוטרת רקמת זהב רוז עדינה. מושלמת לאירועים מיוחדים ולערב בלתי נשכח, עם מראה אלגנטי וייחודי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(185 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪2850</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.1s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1603576751278-f7b5b1b1f1a1?w=400&h=300&fit=crop" alt="תיק קלאץ' 'אמיליה' מעור נאפה איטלקי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">תיק קלאץ' 'אמיליה' מעור נאפה איטלקי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">תיק קלאץ' אלגנטי עשוי עור נאפה איכותי מאיטליה, עם אבזם זהב רוז ועיצוב קלאסי. מרווח מספיק לכל הפריטים החיוניים שלך ומוסיף נופך של יוקרה לכל לוק.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(210 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪980</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.2s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1569477002824-343434343434?w=400&h=300&fit=crop" alt="שרשרת 'קסם השאנז אליזה' בציפוי רוז גולד" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-15%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שרשרת 'קסם השאנז אליזה' בציפוי רוז גולד</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שרשרת עדינה ואלגנטית בציפוי רוז גולד עם תליון מעוצב בהשראת הארכיטקטורה הפריזאית. תוספת מושלמת לשדרוג כל צווארון או מפתח חזה עמוק.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(340 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪550</span>
+              <span class="text-lg text-gray-400 line-through">₪650</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.30000000000000004s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1610996120530-972170c53d5a?w=400&h=300&fit=crop" alt="חליפת שני חלקים 'פריזאית' מבד קטיפה משובח" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">חליפת שני חלקים 'פריזאית' מבד קטיפה משובח</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">חליפת מעצבים בלעדית מקטיפה יוקרתית בגזרת סקיני מחמיאה. כוללת בלייזר מחוייט ומכנסיים עם גימור זהב רוז, לאירועים נוצצים ולמראה יוקרתי במיוחד.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(98 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1950</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.4s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562900018-8d4e4c2c2f2d?w=400&h=300&fit=crop" alt="צעיף משי 'ברטון' בהדפס פסים כחול-לבן" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">צעיף משי 'ברטון' בהדפס פסים כחול-לבן</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">צעיף משי טהור בהדפס פסים קלאסי בהשראת הסטייל הצרפתי. רך ונעים למגע, מוסיף טאץ' של שיק לכל תלבושת, ניתן לענידה במגוון דרכים.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(412 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪280</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.5s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1565158671607-0683690d7943?w=400&h=300&fit=crop" alt="שמלת קוקטייל 'זוהר הפנינה' עם נצנצים עדינים" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת קוקטייל 'זוהר הפנינה' עם נצנצים עדינים</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת קוקטייל אלגנטית בצבע שמפיין עם נצנוץ עדין שובה עין. גזרה מחמיאה ונוחה, אידיאלית לאירועים שדורשים מראה מתוחכם ולא מתאמץ.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(230 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1400</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.6000000000000001s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1604313506140-5a5c6c6c6c6c?w=400&h=300&fit=crop" alt="תיק צד 'שארם' מעור קרוקו איטלקי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-15%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">תיק צד 'שארם' מעור קרוקו איטלקי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">תיק צד יוקרתי מעור קרוקו איטלקי אמיתי בצבע שחור עמוק. עיצוב על-זמני עם פרטי זהב רוז, מושלם לשדרוג כל הופעה יומיומית או ערב.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(160 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1700</span>
+              <span class="text-lg text-gray-400 line-through">₪2000</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.7000000000000001s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596700810173-01826d9c6e3b?w=400&h=300&fit=crop" alt="עגילי 'הילת הירח' עם אבני זירקון נוצצות" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">עגילי 'הילת הירח' עם אבני זירקון נוצצות</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">עגילי אמירה דרמטיים בציפוי רוז גולד, משובצים אבני זירקון נוצצות המשקפות את האור. מוסיפים מגע של גלאם זוהר לכל פנים ולוק.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(280 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪420</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.8s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596160910403-d1e9e2f5f1c9?w=400&h=300&fit=crop" alt="חולצת משי 'לוקס' עם קשירה בצוואר" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">חולצת משי 'לוקס' עם קשירה בצוואר</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">חולצת משי מעצבים יוקרתית בצבע שמפיין עם קשירה אלגנטית בצוואר. פריט רב-גוני שניתן לשלב בלוק קז'ואל-יוקרתי או בלוק ערב מתוחכם.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(110 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪850</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 0.9s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596196144866-98c4b7b3d1b1?w=400&h=300&fit=crop" alt="כובע ברט 'שיק פריזאי' מצמר איכותי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">כובע ברט 'שיק פריזאי' מצמר איכותי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">כובע ברט קלאסי עשוי צמר איכותי בצבע שחור, עם גימור מושלם. הפריט האייקוני שישלים כל מראה בהשראת בנות פריז האופנתיות.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(380 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪250</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1592383561579-2c7009c9d9d3?w=400&h=300&fit=crop" alt="שמלת מידי 'אביב במונמארטר' עם הדפס פרחים" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת מידי 'אביב במונמארטר' עם הדפס פרחים</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת מידי יוקרתית מבד זורם עם הדפס פרחים עדין בהשראת הגנים הפריזאיים. מושלמת לאירועי יום ולאירועי ערב קלילים.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(190 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1600</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.1s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1604313506140-5a5c6c6c6c6c?w=400&h=300&fit=crop" alt="תיק נשיאה 'שאנלייז' מעור סאפיינו" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-20%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">תיק נשיאה 'שאנלייז' מעור סאפיינו</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">תיק נשיאה גדול ומרשים מעור סאפיינו איטלקי, בעל גימור מבריק ויוקרתי. מושלם לאישה העסוקה שרוצה לשלב סטייל ופרקטיות ללא פשרות.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(120 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪2400</span>
+              <span class="text-lg text-gray-400 line-through">₪3000</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.2000000000000002s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1563212629-9e0a2d2f7f7f?w=400&h=300&fit=crop" alt="צמיד 'אור הירח' בציפוי זהב רוז עם קריסטלים" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">צמיד 'אור הירח' בציפוי זהב רוז עם קריסטלים</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">צמיד אלגנטי בציפוי זהב רוז משובץ קריסטלים נוצצים. עיצוב עדין אך בעל נוכחות, מושלם לענידה יומיומית או כשדרוג לערב.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(310 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪350</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.3s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1583794351660-f65511b0e9c8?w=400&h=300&fit=crop" alt="ז'קט מחויט 'קוקו' עם כפתורי זהב" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">ז'קט מחויט 'קוקו' עם כפתורי זהב</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">ז'קט מחויט בסטייל קלאסי-פריזאי עם כפתורי זהב רוז מבריקים. מוסיף מיד מראה יוקרתי ומעודן לכל חולצה או שמלה שתלבשי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(75 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1800</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.4000000000000001s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1550995079-052a7c4a1e9c?w=400&h=300&fit=crop" alt="חגורת עור 'מדמוזל' עם אבזם זהב רוז" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">חגורת עור 'מדמוזל' עם אבזם זהב רוז</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">חגורת עור איכותית עם אבזם זהב רוז אלגנטי. הפריט המושלם להדגשת המותניים ולשדרוג מראה של שמלות או חולצות ארוכות.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(250 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪490</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.5s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1583794351660-f65511b0e9c8?w=400&h=300&fit=crop" alt="שמלת מקסי 'הוט קוטור' משיפון שחור" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-14%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת מקסי 'הוט קוטור' משיפון שחור</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת מקסי דרמטית משיפון שחור זורם, עם שרוולים שקופים וצווארון וי עמוק. עיצוב ייחודי שנועד למשוך תשומת לב בכל אירוע יוקרתי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(115 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪2500</span>
+              <span class="text-lg text-gray-400 line-through">₪2900</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.6s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1604313506140-5a5c6c6c6c6c?w=400&h=300&fit=crop" alt="ארנק 'וונציה' מעור קרוקו עם תא רוכסן" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">ארנק 'וונציה' מעור קרוקו עם תא רוכסן</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">ארנק עור איכותי עם טקסטורת קרוקו, מעוצב במיוחד לאחסון נוח של כרטיסים ומטבעות. קומפקטי אך מרווח, עם תא רוכסן נפרד לאבטחה מירבית.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(180 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪750</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.7000000000000002s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596700810173-01826d9c6e3b?w=400&h=300&fit=crop" alt="טבעת 'יהלום פריזאי' בזהב רוז ובשיבוץ זירקון" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-20%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">טבעת 'יהלום פריזאי' בזהב רוז ובשיבוץ זירקון</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">טבעת אמירה מרהיבה בציפוי זהב רוז, עם שיבוץ אבן זירקון מרכזית גדולה ונוצצת. מוסיפה יוקרה ונוכחות לכל כף יד, מושלמת ללוק הערב.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(295 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪680</span>
+              <span class="text-lg text-gray-400 line-through">₪850</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.8s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1565158671607-0683690d7943?w=400&h=300&fit=crop" alt="שמלת מעטפת 'ריקוד בבאל מוקה' משי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת מעטפת 'ריקוד בבאל מוקה' משי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת מעטפת אלגנטית מבד משי רך וזורם, בגזרה מחמיאה לכל מבנה גוף. עיצוב בלעדי המשלב נוחות עם מראה שיקי ויוקרתי כאחד.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(60 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1750</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 1.9000000000000001s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562900018-8d4e4c2c2f2d?w=400&h=300&fit=crop" alt="גרביוני רשת 'פאריס נייטס' מעוטרים" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">גרביוני רשת 'פאריס נייטס' מעוטרים</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">גרביוני רשת יוקרתיים בעיטורים עדינים בסטייל פריזאי. מושלמים לשדרוג מראה עם שמלות קוקטייל או חצאיות, ומוסיפים טאץ' נועז ואלגנטי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(150 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪200</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1565158671607-0683690d7943?w=400&h=300&fit=crop" alt="שמלת מיני 'ליל כלולות' תחרה וזהב רוז" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת מיני 'ליל כלולות' תחרה וזהב רוז</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת מיני חושנית עם תחרה עשירה ופרטי זהב רוז. מושלמת למסיבות קוקטייל או ערב שבו תרצי להרגיש זוהרת ובולטת בקהל.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(88 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1300</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.1s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1603576751278-f7b5b1b1f1a1?w=400&h=300&fit=crop" alt="תיק כתף 'אייפל' עם שרשרת זהב רוז" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">תיק כתף 'אייפל' עם שרשרת זהב רוז</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">תיק כתף איטלקי מעור משובח, בעל מבנה מודרני ושרשרת זהב רוז עבה. נוח לנשיאה ומוסיף שיק מיידי לכל מראה, בין אם ליום או לערב.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(130 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1550</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.2s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1596700810173-01826d9c6e3b?w=400&h=300&fit=crop" alt="עגילי חישוק 'אוריינט אקספרס' משובצי קריסטל" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-15%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">עגילי חישוק 'אוריינט אקספרס' משובצי קריסטל</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">עגילי חישוק גדולים ומרשימים משובצים קריסטלים נוצצים, בהשראת הסטייל הקלאסי והמפואר. משדרגים מיד כל תסרוקת.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(210 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪380</span>
+              <span class="text-lg text-gray-400 line-through">₪450</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.3000000000000003s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1565158671607-0683690d7943?w=400&h=300&fit=crop" alt="שמלת קולר 'שמפיין לילה' מבד סאטן" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת קולר 'שמפיין לילה' מבד סאטן</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת קולר אלגנטית מבד סאטן יוקרתי בצבע שמפיין, עם גב פתוח עדין. השמלה המושלמת שתגרום לך להרגיש כוכבת בכל ערב.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(140 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪2100</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.4000000000000004s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1562900018-8d4e4c2c2f2d?w=400&h=300&fit=crop" alt="כפפות עור 'אלגנס' ארוכות שחורות" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">כפפות עור 'אלגנס' ארוכות שחורות</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">כפפות עור שחורות ארוכות ויוקרתיות, מושלמות לשילוב עם מעיל ערב או שמלה לסטייל דרמטי ומלא שיק פריזאי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(90 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪520</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.5s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1592383561579-2c7009c9d9d3?w=400&h=300&fit=crop" alt="שמלת ג'רזי 'ריביירה' עם גזרת חובק גוף" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת ג'רזי 'ריביירה' עם גזרת חובק גוף</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת ג'רזי נוחה אך יוקרתית בגזרת חובק גוף מחמיאה, בצבע ניוד-שמפיין. מתאימה למגוון אירועים ומשדרת אלגנטיות קלילה.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(45 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪990</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.6s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1603576751278-f7b5b1b1f1a1?w=400&h=300&fit=crop" alt="תיק ערב 'לוקסמבורג' עם שרשרת זהב" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-20%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">תיק ערב 'לוקסמבורג' עם שרשרת זהב</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">תיק ערב קטן ואלגנטי עם שרשרת זהב עדינה וסגירת קלאץ'. מושלם לאירועים רשמיים בהם תרצי לשמור על מינימליזם יוקרתי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(270 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1100</span>
+              <span class="text-lg text-gray-400 line-through">₪1400</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.7s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1569477002824-343434343434?w=400&h=300&fit=crop" alt="עגילים צמודים 'כוכבי סן טרופה' עם פנינים" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">עגילים צמודים 'כוכבי סן טרופה' עם פנינים</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">עגילים צמודים משובצים בפנינים ופרטי זהב רוז עדינים. קלאסיים ועל-זמניים, מתאימים לכל לוק ומוסיפים נגיעה של שיק יוקרתי.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(420 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪290</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.8000000000000003s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1592383561579-2c7009c9d9d3?w=400&h=300&fit=crop" alt="שמלת מעטפת 'שיק מון' משי בהדפס גיאומטרי" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-13%</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">שמלת מעטפת 'שיק מון' משי בהדפס גיאומטרי</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">שמלת מעטפת ייחודית מבד משי משובח בהדפס גיאומטרי אמנותי. גזרה נוחה ומחמיאה, פריט אמירה שישדרג את המלתחה שלך.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(55 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪1650</span>
+              <span class="text-lg text-gray-400 line-through">₪1900</span>
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="product-card animate-fadeInUp" style="animation-delay: 2.9000000000000004s;">
+        <div class="relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1563212629-9e0a2d2f7f7f?w=400&h=300&fit=crop" alt="צמיד קשיח 'פאר פלייס ונדום' מזהב רוז" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+          
+          
+        </div>
+        <div class="p-6">
+          <h3 class="font-display text-xl font-semibold mb-2 text-gray-800">צמיד קשיח 'פאר פלייס ונדום' מזהב רוז</h3>
+          <p class="text-gray-600 mb-4 line-clamp-2">צמיד קשיח מרשים בציפוי זהב רוז, עם עיצוב בהשראת הכיכרות האלגנטיות של פריז. תוספת מושלמת ליד, לבד או בשילוב עם תכשיטים נוספים.</p>
+          
+          
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex stars">
+              ★★★★☆
+            </div>
+            <span class="text-sm text-gray-500">(390 ביקורות)</span>
+          </div>
+          
+          
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-bold text-primary">₪720</span>
+              
+            </div>
+            <button class="btn-premium px-4 py-2 text-sm">הוסף לסל</button>
+          </div>
+        </div>
+      </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 gradient-secondary">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-display text-4xl font-bold mb-8 text-gradient">הסיפור שלנו</h2>
+            <div class="card-premium p-8 rounded-2xl">
+                <p class="text-lg leading-relaxed text-gray-700">הכול התחיל בחלום נושן על פריז – על אותה אלגנטיות נצחית, חופשיה ומלאת שיק, שכה מאפיינת את נשות העיר האורות. מתוך הבנה עמוקה של צורך בביטוי אישי ויוקרתי לנשים בישראל, יצאנו למסע לחפש, לבחור ולאצור קולקציה בלעדית שתביא את הניחוח הפריזאי עד לפתח ביתך. האתגר היה ליצור חוויה שאינה רק קנייה, אלא מסע לגילוי עצמי של סגנון ואלגנטיות, שהצלחנו לפצח בזכות שיתופי פעולה עם מעצבים מובילים וקשר בלתי אמצעי עם קהל לקוחותינו הנאמן. כיום, בוטיק אֶלִיזֶה הוא לא רק חנות, אלא מקדש לסטייל, המציע לך את ההזדמנות להתלבש לא רק בבגדים, אלא בסיפור.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Footer -->
+    <footer id="contact" class="gradient-bg text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center">
+                
+                
+                
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center">
+                <p class="text-lg">&copy; 2025 בוטיק אֶלִיזֶה. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-fadeInUp elements
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
